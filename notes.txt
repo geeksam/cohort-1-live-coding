@@ -1,0 +1,42 @@
+https://github.com/geeksam/poker-dice
+
+( UPDATED BASED ON YOUR FEEDBACK :D )
+
+Scoring a hand!
+I usually build a hash that looks like this:
+
+{
+  '9' => 0,
+  'T' => 3,
+  'J' => 0,
+  'Q' => 0,
+  'K' => 2,
+  'A' => 0,
+}
+
+--
+
+Quotes!
+
+  "Even for experts, programming is an exploratory process.  We
+  experiment with libraries, run through examples and iteratively build
+  up features.  One of the most painful lessons beginners have to learn
+  is just how often everyone is wrong about everything.  Tightening the
+  feedback loop between writing code and seeing the results reduces the
+  damage caused by wrong assumptions, lightens the cognitive load of
+  tracking what should be happening and helps build accurate mental
+  models of the system. The latter is especially important for beginners
+  who often suffer from miscomprehensions about even the basic semantics
+  of the language."
+
+  FROM:  http://www.lighttable.com/2014/05/16/pain-we-forgot/
+
+
+
+
+
+
+
+
+
+
