@@ -6,12 +6,8 @@ module Fizzbuzz
     divisible_by_five  = (n % 5).zero?
 
     s = ''
-    if divisible_by_three
-      s << "Fizz"
-    end
-    if divisible_by_five
-      s << "Buzz"
-    end
+    s << "Fizz" if divisible_by_three
+    s << "Buzz" if divisible_by_five
 
     if s.length.zero?
       n
