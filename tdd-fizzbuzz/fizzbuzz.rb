@@ -5,14 +5,18 @@ module Fizzbuzz
     divisible_by_three = (n % 3).zero?
     divisible_by_five  = (n % 5).zero?
 
-    if divisible_by_three && divisible_by_five
-      "FizzBuzz"
-    elsif divisible_by_three
-      "Fizz"
-    elsif divisible_by_five
-      "Buzz"
-    else
+    s = ''
+    if divisible_by_three
+      s << "Fizz"
+    end
+    if divisible_by_five
+      s << "Buzz"
+    end
+
+    if s.length.zero?
       n
+    else
+      s
     end
   end
 end
