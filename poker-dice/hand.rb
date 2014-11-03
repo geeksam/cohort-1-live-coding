@@ -8,6 +8,11 @@ class Hand
   end
 
   def rank
-    'Five of a kind'
+    faces = face_values.join
+
+    case faces
+    when /([9TJQKA])\1{4}/ ; 'Five of a kind'
+    else                   ; 'Bupkis'
+    end
   end
 end

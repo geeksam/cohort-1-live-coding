@@ -13,5 +13,11 @@ describe Hand do
     hand = Hand.new( dice )
     expect( hand.rank ).to eq( 'Five of a kind' )
   end
+
+  specify "a bust is not five of a kind" do
+    dice = %w[ 9 T J Q A ].map { |value| LoadedDie.new(value) }
+    hand = Hand.new( dice )
+    expect( hand.rank ).to eq( 'Bupkis' )
+  end
 end
 
