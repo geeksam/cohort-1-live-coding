@@ -31,9 +31,107 @@ Quotes!
   models of the system. The latter is especially important for beginners
   who often suffer from miscomprehensions about even the basic semantics
   of the language."
+  - http://www.lighttable.com/2014/05/16/pain-we-forgot/
 
-  FROM:  http://www.lighttable.com/2014/05/16/pain-we-forgot/
+--
 
+POSSIBLE TOPICS:
+
+  PING-PONG PAIRING
+
+  NARRATIVE STRUCTURE OF A TEST
+    - Arrange, Act, Assert
+    - Given, When, Then
+
+  SETUP
+    - before blocks
+      - because these are run before every test in their context, it's
+        possible to do extra/wasted work
+    - I now tend to see any @ as a sign that something has gone horribly
+      wrong; instead, I favor #let and #let!
+
+  RSPEC DOCUMENTATION:
+    - avoid rspec.info; it is waaaaay out of date
+    - Use https://www.relishapp.com/rspec/ to get an idea of what you can do
+      - Core: covers describe, it, before, shared contexts, etc
+      - Expectations: equality, identity, "truthiness and existentialism" :D
+      - Mocks: stuff to do with test doubles
+    - Use RSpec's RDoc to find details about how a specific method works
+      - http://rubydoc.info/gems/rspec-core/
+
+  REFACTORING
+    - hooboy, this is a big one
+    - this pattern is OK:  (red, green) x2, refactor x5
+      - just make sure to commit after each green bar!
+    - code smells
+
+  KINDS OF TESTS
+    - Unit tests generally have these characteristics:
+      - they run fast!  As in "hundreds or thousands of tests per
+        second"
+      - they're fast because they're isolated (from file system, from
+        database, from I/O, ... the object under test is in a creche in
+        the matrix, and it has no idea that anything is wrong)
+      - they tend to use doubles (mocks and stubs)
+    - Integration tests
+      - tend to set up scenarios, invoke code, and verify state
+        - see also: blog post: "Mocks Aren't Stubs" by Martin Fowler
+      - "short-span": only testing a few interacting objects, e.g., a
+        subsystem
+      - "full stack": the whole enchilada
+      - May still focus on a specific scenario or edge case
+    - Acceptance test
+      - *might* be written by a user (or at least a product manager), if
+        you're lucky
+      - *should* be readable by them
+      - describe some scenario *in terms that a user cares about*
+        - ex:  "When I update my profile" versus "When I click on the
+          'my profile' link, go to the profile page, and enter 'Sam' in
+          the first name field... blah blah blah"
+
+  TOP-DOWN vs BOTTOM-UP
+    - testing spiral
+    - testing pyramid
+
+  GOOS / LISTENING TO YOUR TESTS
+    - GOOS == Growing Object-Oriented Software, Guided by Tests
+    - testing smells?
+
+  WHAT TO TEST / WHAT NOT TO TEST
+    - Sandi Metz, "The Magic Tricks of Testing":  metaphor of the space
+      capsule.  Test at the boundaries of an object.  Distinguish
+      between commands and queries:  for queries, test the return value
+      on the thing that implements them.  For commands, test that the
+      right outbound messages get sent.  (See also:  TEST DOUBLES)
+    - don't test the behavior of a thing you do not control
+    - don't test the internal/private behavior of your objects
+
+  TEST DOUBLES
+    - mocks
+    - stubs
+    - spies
+
+  RAILS-SPECIFIC TESTING ISSUES
+    - fixtures, which obviously suck
+    - factories, which *seem* way better than fixtures, and in fact can
+      be considerably better for setting up state for big tests, but...
+      which ultimately can be just as evil as fixtures because they make
+      it easy to work with code that has a lot of dependencies.
+    - controller tests make it hard to inject dependencies
+      - gourmet service objects
+    - speed!
+      - use in-memory database instead of on-disk database
+      - use a fake database object
+      - use fixture data (not recommended; it's brittle)
+      - use factories (more flexible than fixtures, but still slow)
+      - use TEST DOUBLES
+      - move code out of Rails' objects and into your own service
+        objects, gems, the lib directory, whatever.  Leave your data in
+        ActiveRecord, but put your behavior elsewhere.
+
+  "THE SANDI METZ RULES"
+
+  ARLO'S DANGER SENSE
 
 
 
