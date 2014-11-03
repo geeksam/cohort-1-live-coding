@@ -3,14 +3,12 @@ require_relative 'loaded_die'
 
 describe Hand do
   def hand_with(face_values)
-    dice = %w[ Q Q Q Q Q ].map { |value| LoadedDie.new(value) }
+    dice = face_values.map { |value| LoadedDie.new(value) }
     hand = Hand.new( dice )
   end
 
   it "has five dice, each of which has a known face value" do
-    # dice = %w[ Q Q Q Q Q ].map { |value| LoadedDie.new(value) }
-    # hand = Hand.new( dice )
-    hand = hand_with(nil)
+    hand = hand_with(%w[ Q Q Q Q Q ])
     expect( hand.face_values ).to eq( %w[ Q Q Q Q Q ] )
   end
 
