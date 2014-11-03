@@ -18,6 +18,9 @@ I usually build a hash that looks like this:
 
 Quotes!
 
+  "Tests are the Programmer's Stone, transmuting fear into boredom."
+  - Kent Beck
+
   "Even for experts, programming is an exploratory process.  We
   experiment with libraries, run through examples and iteratively build
   up features.  One of the most painful lessons beginners have to learn
