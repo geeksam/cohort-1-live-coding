@@ -16,4 +16,8 @@ describe Fizzbuzz do
   specify "fb_value(5) is 'Buzz'" do
     expect( Fizzbuzz.fb_value(5) ).to eq( 'Buzz' )
   end
+
+  specify "fb_value(15) is 'FizzBuzz'" do
+    expect( Fizzbuzz.fb_value(15) ).to eq( 'FizzBuzz' )
+  end
 end

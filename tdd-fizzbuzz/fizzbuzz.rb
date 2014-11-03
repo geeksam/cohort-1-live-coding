@@ -2,7 +2,9 @@ module Fizzbuzz
   extend self
 
   def fb_value(n)
-    if (n % 3).zero?
+    if (n % 3).zero? && (n % 5).zero?
+      "FizzBuzz"
+    elsif (n % 3).zero?
       "Fizz"
     elsif (n % 5).zero?
       "Buzz"
