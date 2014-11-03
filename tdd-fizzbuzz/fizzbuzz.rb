@@ -1,7 +1,7 @@
 module Fizzbuzz
   extend self
 
-  def fb_value(*)
-    1
+  def fb_value(n)
+    n
   end
 end
