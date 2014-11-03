@@ -8,11 +8,14 @@ class Hand
   end
 
   def rank
-    faces = face_values.join
+    counts = Hash.new(0)
+    face_values.each do |face|
+      counts[face] += 1
+    end
 
-    case faces
-    when /([9TJQKA])\1{4}/ ; 'Five of a kind'
-    else                   ; 'Bupkis'
+    case
+    when counts.values.include?(5) ; 'Five of a kind'
+    else                           ; 'Bupkis'
     end
   end
 end
