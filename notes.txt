@@ -134,6 +134,15 @@ POSSIBLE TOPICS:
   "THE SANDI METZ RULES"
 
   ARLO'S DANGER SENSE
+  - Arlo Belshee shared this in a class on Extreme Programming:
+    1) More than 15 mins since last checkin.
+    2) The code I'm working on is not unit tested.
+    3) The code I'm working on is not visible in the UI.
+    4) I'm feeling anything but calm, relaxed, and happy.
+    5) I'm trying to think -- about anything.
+    6) I haven't said anything in 2 minutes.
+    7) I'm remembering something -- anything -- for later.
+    8) I'm proud of the code I'm writing.
 
 
 
