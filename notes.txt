@@ -49,6 +49,7 @@ POSSIBLE TOPICS:
         possible to do extra/wasted work
     - I now tend to see any @ as a sign that something has gone horribly
       wrong; instead, I favor #let and #let!
+    - nested contexts, #describe vs #context
 
   RSPEC DOCUMENTATION:
     - avoid rspec.info; it is waaaaay out of date
@@ -137,6 +138,7 @@ POSSIBLE TOPICS:
         ActiveRecord, but put your behavior elsewhere.
 
   "THE SANDI METZ RULES"
+    - See Sandi's "Rules" talk on confreaks
 
   ARLO'S DANGER SENSE
     Arlo Belshee shared this in a class on Extreme Programming:
