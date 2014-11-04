@@ -61,6 +61,8 @@ POSSIBLE TOPICS:
 
   REFACTORING
     - hooboy, this is a big one
+      - http://www.confreaks.com/videos/1071-cascadiaruby2012-therapeutic-refactoring
+      - http://www.confreaks.com/videos/2792-cascadiaruby2013-fluent-refactoring (watch Katrina's first!)
     - this pattern is OK:  (red, green) x2, refactor x5
       - just make sure to commit after each green bar!
     - code smells
