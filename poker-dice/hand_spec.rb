@@ -34,5 +34,9 @@ describe Hand do
     hand = hand_with(%w[ 9 T J Q A ])
     expect( hand.rank ).to eq( 'Bupkis' )
   end
+
+  it "should do the thing"
+  it "should do that other thing too"
+  it "should avoid that terrible failure mode"
 end
 
