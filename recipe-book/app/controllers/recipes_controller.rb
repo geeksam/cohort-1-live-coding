@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
   end
 
   def search
-    @recipes = Recipe.with_ingredient_named("Tofu")
+    @recipes = Recipe.with_ingredient_named(params[:ingredient_name])
   end
 
   # GET /recipes/1
