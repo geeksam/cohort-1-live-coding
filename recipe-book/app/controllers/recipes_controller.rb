@@ -7,6 +7,10 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
   end
 
+  def search
+    @recipes = Recipe.with_ingredient_named("Tofu")
+  end
+
   # GET /recipes/1
   # GET /recipes/1.json
   def show
