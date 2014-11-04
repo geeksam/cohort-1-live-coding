@@ -59,6 +59,11 @@ POSSIBLE TOPICS:
     - Use RSpec's RDoc to find details about how a specific method works
       - http://rubydoc.info/gems/rspec-core/
 
+  KNOW YOUR TOOLS
+    - RSpec feature tour
+    - xUnit comparison (testing rosetta stone)
+    - Cucumber
+
   REFACTORING
     - hooboy, this is a big one
       - http://www.confreaks.com/videos/1071-cascadiaruby2012-therapeutic-refactoring
@@ -145,8 +150,10 @@ POSSIBLE TOPICS:
     8) I'm proud of the code I'm writing.
 
   MISC LINKS
-    Jim Shore on think/red/green/refactor:
+  - Jim Shore on think/red/green/refactor:
     http://www.jamesshore.com/Blog/Red-Green-Refactor.html
+  - Sandi Metz: Practical Object Oriented Design in Ruby
+    http://poodr.info
 
 
 
