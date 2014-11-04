@@ -3,7 +3,20 @@ require_relative 'loaded_die'
 
 describe Hand do
   def hand_with(face_values)
-    dice = face_values.map { |value| LoadedDie.new(value) }
+    # What we started with
+    dice = face_values.map { |value|
+      LoadedDie.new(value)
+    }
+    # Intermediate version
+    dice = face_values.map { |value|
+      obj = Object.new
+      obj.define_singleton_method(:face_value) { value }
+      obj
+    }
+    # Using RSpec's #double method
+    dice = face_values.map { |value|
+      double("Die", :face_value => value)
+    }
     hand = Hand.new( dice )
   end
 
